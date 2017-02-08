@@ -1,23 +1,21 @@
 # AudioUpload
 
-Upload,stream, and share audio files.
+Upload,stream,and share your audio files.
 
 
 ## Screenshots
  
 
 ## Live Demo
-
-[Live Demo](https://audioupload.herokuapp.com/) - https://audioupload.herokuapp.com/
+https://audioupload.herokuapp.com/
 
 
 ## Built With
-
-* [Node.js](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Express](https://maven.apache.org/) - Dependency Management
-* [EJS](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-* [MongoDB](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-* [Bootstrap 3](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Node.js](https://nodejs.org/) 
+* [Express](http://expressjs.com/)
+* [EJS](http://www.embeddedjs.com/)
+* [MongoDB](https://www.mongodb.com/)
+* [Bootstrap 3](https://getbootstrap.com/) 
 
 
 
