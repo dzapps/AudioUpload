@@ -7,7 +7,7 @@ app.engine('html', require('ejs').renderFile);
 var helpers = require('express-helpers');
 helpers(app);
 
-var server = app.listen(5000, function () {
+var server = app.listen(process.env.PORT, function () {
     console.log("server started")
 });
 
@@ -17,7 +17,7 @@ var ObjectID = mongodb.ObjectID;
 var db;
 var FILE_COLLECTION = "files";
 
-mongodb.MongoClient.connect(process.env.mongodb_uri, function (err, database) {
+mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, database) {
     if (err) {
         console.log(err);
         process.exit(1);
