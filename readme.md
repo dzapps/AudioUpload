@@ -19,14 +19,22 @@ https://audioupload.herokuapp.com/
 
 
 ![Uploading files](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/uploading.PNG "Uploading files")
-  
+
+
+
+ 
+![Uploading files](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/uploaded.PNG "Uploaded files")
+ 
   
   
 ### Audio Player   
 ![Audio](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/audio_player.PNG "Audio Player")
  
  
- 
+### Featured uploads
+ ![Recent](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/top.PNG "Recent Uploads")
+  
+  
 ### Recent uploads
  ![Recent](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/recent.PNG "Recent Uploads")
   
