@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/home">AudioShare</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/upload">Upload</a></li>
+            <li><a href="/files">Recent Uploads</a></li>
+        </ul>
+    </div>
+</nav>
+
+<br><br><br>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".<%= s._id %>link").val(window.location.protocol + "//" + window.location.hostname + '/files/<%= s._id %>');
+        $(".<%= s._id %>urlbox").click(function () {
+            $(".<%= s._id %>link").select();
+        });
+        $(".<%= s._id %>urlbox").click(function () {
+            $(".<%= s._id %>link").select();
+        })
+    });
+</script>
+
+<div class="container">
+    <h1>Thank you for uploading <%= s.originalname %></h1>
+    <hr>
+    <button onclick="window.open('/files/<%= s._id %>','Playing audio','width=400px,height=300px')"
+            class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-play-circle"></span> Play
+    </button>
+    <br><br>
+    <div class="<%= s._id %>urlbox">
+        <span class="glyphicon glyphicon-link"></span>
+        <input type="text" value="" class="form-control <%= s._id %>link" readonly>
+    </div>
+    <hr>
+    <a href="/upload">Upload another audio file</a>
+    <hr>
+    <a href="/files">Recent uploads</a>
+    <hr>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+.well{
+	
+	border:0;
+}
+body{
+	}
+
+hr {
+	border-top-color:black !important;
+}
+
+nav a:hover{
+	color:#337ab7 !important;
+}
+.jumbotron{
+
+}
+
+/*file upload button*/
+input[type="file"] {
+	display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+}
+/*--------------------*/
+
+
+
+.btn-default{
+	color:#337ab7;
+}
+
+.btn-info{
+	background-color:#337ab7 !important;
+}
+
+.panel-group .panel-footer{
+	background-color:#ccc;
+	border-radius:0;
+}
+
+

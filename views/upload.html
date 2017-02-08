@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/home">AudioShare</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="/home">Home</a></li>
+            <li class="active"><a href="/upload" class="active">Upload</a></li>
+            <li><a href="/featured">Featured</a></li>
+            <li><a href="/files">Recent</a></li>
+        </ul>
+    </div>
+</nav>
+<br>
+<div class="jumbotron text-center">
+    <h1>Share your audio</h1>
+</div>
+
+<div class="well">
+    <form action="/process_upload" method="POST" enctype="multipart/form-data" name="fileupload">
+
+
+        <label for="upload" class="btn btn-primary btn-lg custom-file-upload">
+            <pre>Supported file types: .mp3 / .wav / .ogg</pre>
+            <br><br>
+            <h1>
+                <span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Browse....&nbsp;
+            </h1>
+            <br><br>
+        </label>
+        <input name="myfile" type="file" id="upload" accept="audio/*">
+
+
+        <br><br>
+
+
+        <button style="width:100%;" class="btn btn-primary btn-lg" type="submit"><h2><span
+                class="glyphicon glyphicon-cloud-upload"></span>&nbsp;Upload&nbsp;</h2></button>
+
+    </form>
+</div>
+
+</body>
+</html>

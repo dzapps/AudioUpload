@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/home">AudioShare</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/home">Home</a></li>
+      <li><a href="/upload">Upload</a></li>
+        <li><a href="/featured">Featured</a></li>
+      <li class="active"><a href="/files">Recent </a></li>
+    </ul>
+  </div>
+</nav>
+ 
+<br>
+<div class="jumbotron text-center">
+
+  <h1>Recent Uploads</h1>
+</div>
+    <div class="well text-left"> 
+    <% for(var i=0; i < allFiles.length; i++) { %>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".<%=allFiles[i]._id %>link").val(window.location.protocol+"//"+window.location.hostname +'/files/<%=allFiles[i]._id %>');
+                $(".<%=allFiles[i]._id %>urlbox").click(function(){
+                    $(".<%=allFiles[i]._id %>link").select();
+                });
+                $(".<%=allFiles[i]._id %>urlbox").click(function(){
+                    $(".<%=allFiles[i]._id %>link").select();
+                });
+
+                $(".<%=allFiles[i]._id %>likebtn").click(function(){
+                    $.get("/like",
+                            {
+                                lsongID: "<%=allFiles[i]._id %>"
+                            },
+                            function(data, status){
+                                $(".<%=allFiles[i]._id %>likebtn").removeClass("btn-default").addClass("btn-success disabled");
+                                $(".<%=allFiles[i]._id %>dislikebtn").slideUp();
+
+                                function reload(){
+                                    location.reload();
+                                }
+                                window.setTimeout(reload, 500);
+
+
+
+
+
+                            });
+                });
+                $(".<%=allFiles[i]._id %>dislikebtn").click(function(){
+                    $.get("/dislike",
+                            {
+                                dsongID: "<%=allFiles[i]._id %>"
+                            },
+                            function(data, status){
+                                $(".<%=allFiles[i]._id %>dislikebtn").removeClass("btn-default").addClass("btn-danger disabled");
+                                $(".<%=allFiles[i]._id %>likebtn").fadeOut();
+                                function reload(){
+                                    location.reload();
+                                }
+                                window.setTimeout(reload, 500);
+
+                            });
+                });
+            });
+        </script>
+       <div class="panel-group">
+
+
+    <div class="panel panel-primary">
+      <div class="panel-heading"><h4><%=allFiles[i].originalname%></h4></div>
+      <div class="panel-body" style="">
+          <button onclick="window.open('/files/<%=allFiles[i]._id %>','Playing audio','width=400px,height=300px')" class="btn btn-default btn-lg">
+          <span class="glyphicon glyphicon-play-circle"></span> Play
+        </button>
+
+                <button class="btn btn-default btn-lg <%=allFiles[i]._id %>likebtn"><span class="glyphicon glyphicon-chevron-up"></span></button>
+                <button class="btn btn-default btn-lg <%=allFiles[i]._id %>dislikebtn"><span class="glyphicon glyphicon-chevron-down"></span></button>
+    
+
+
+
+ <div class="score"><h2>Score: <%=allFiles[i].score %> </h2></div>
+ <hr>
+</div>
+
+
+ <div class="panel panel-footer <%=allFiles[i]._id %>urlbox">
+<span class="glyphicon glyphicon-link"></span>
+<input type="text" value="asasas" class="form-control <%=allFiles[i]._id %>link" readonly>
+    </div>
+
+    </div>
+
+   </div>     
+      <br>
+  <% } %>
+ 
+</div>
+</body>
+</html>
