@@ -4,8 +4,8 @@ Upload,stream,and share your audio files.
 
 ## Screenshots
   ### Home page
-  *![Home](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/home.PNG "Home")
-  ---
+ (https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/home.PNG "Home")
+
   ### Uploading files
   ![Upload](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/upload.PNG "Upload")
    ---
