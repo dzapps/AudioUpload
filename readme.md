@@ -4,7 +4,7 @@ Upload,stream,and share your audio files.
 
 
 ## Screenshots
- 
+ ![Upload](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/upload.PNG "Upload")
 
 ## Live Demo
 https://audioupload.herokuapp.com/
