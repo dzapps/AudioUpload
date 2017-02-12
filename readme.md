@@ -1,5 +1,5 @@
 # AudioUpload
-Upload,stream,and share your audio files.
+Upload, stream, and share your audio files.
 
 ## Live Demo
 https://audioupload.herokuapp.com/
