@@ -1,10 +1,8 @@
 
-.well{
-	
-	border:0;
-}
-body{
-	}
+
+
+
+
 
 hr {
 	border-top-color:black !important;
@@ -12,6 +10,7 @@ hr {
 
 nav a:hover{
 	color:#337ab7 !important;
+
 }
 .jumbotron{
 
@@ -22,26 +21,205 @@ input[type="file"] {
 	display: none;
 }
 
+
 .custom-file-upload {
     display: inline-block;
     cursor: pointer;
     width: 100%;
 }
+
+
+.btn-default {
+background-color:#FFBA08 !important; 
+color:#032B43 !important;
+border: 0px; 
+}
+.btn-info {
+background-color:#FFBA08 !important; 
+color: #032B43;
+border: 0px; 
+
+}
+
+
+
 /*--------------------*/
 
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      background-color: #032B43;
+      color: #D00000 !important;
+  }
 
 
-.btn-default{
-	color:#337ab7;
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 0px;
+  }
+  h2 a{
+      color: #FFBA08;
+  }
+
+  h2 a:hover{
+  	  color: white;
+  }
+  h4 {
+  	 text-transform: uppercase;
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 0px;
+  }  
+
+  h6{
+  	text-transform: uppercase;
+  }
+
+  .jumbotron {
+      background-color: #FFBA08;
+      color: #032B43;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+    .info {
+      color: #FFBA08;
+      padding: 10px 10px;
+      
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 40px 20px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #FFBA08;
+      font-size: 50px;
+  }
+  .logo {
+      color: #FFBA08;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 0px; 
+      border-radius:0 !important;
+      transition: box-shadow 0.1s;
+      background-color: white!important;
+  }
+
+
+
+.panel .btn-info{
+  color: #032B43 !important;
+}
+ .panel .btn-default{
+	color: green !important;
+  border: 1px solid black; 
 }
 
-.btn-info{
-	background-color:#337ab7 !important;
-}
 
-.panel-group .panel-footer{
-	background-color:#ccc;
-	border-radius:0;
+
+
+  .panel-heading {
+      color: #032B43 !important;
+      background-color: #FFBA08 !important;
+      padding: 10px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: #FFBA08 !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #FFBA08;
+      color: #136F63;
+  }
+ .form-control {
+	background-color:#FFBA08 !important;
+	color:#032B43 !important;
+	border:0px !important;
+	box-shadow:inset 0 0 10px !important;
 }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #FFBA08;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #D00000 !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #FFBA08 !important;
+      background-color: #D00000 !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #D00000 !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #FFBA08;
+  }
+
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+
 
 

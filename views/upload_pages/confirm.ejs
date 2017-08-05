@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../../views/partials/head %>
+<body onload="generateCopyURL('<%= s._id %>');">
+<% include ../../views/partials/nav %>
+
+<% include ../../views/partials/header %>
+
+   <div class="info text-center">
+    <h2 class="text-center">Thank you for uploading <%= s.originalname %>&nbsp;<span class="glyphicon glyphicon-headphones"></span></h2>
+    <hr>
+     <button onclick="OpenURL('<%= s._id %>');" class="btn btn-default">
+        <span class="glyphicon glyphicon-play-circle"></span> Play
+    </button>
+    <hr>
+    <h2 class="text-center"> <a href="/upload">Upload another audio file</a></h2><hr>
+    <h2 class="text-center"> <a href="/files">Recent uploads</a></h2><hr>
+    <h2 class="text-center">Shareable Link <span class="glyphicon glyphicon-link"></span></h2><br>
+      <div id="<%=s._id %>-urlbox">
+        <input type="text" class="form-control" id="<%=s._id %>-url" readonly>
+      </div>
+
+  </div>
+<% include ../../views/partials/footer %>
+</body>
+</html>

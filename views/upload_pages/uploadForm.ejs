@@ -1,0 +1,26 @@
+<!-- upload form -->
+<div class="info container-fluid text-center">
+
+    <form action="/process_upload" method="POST" enctype="multipart/form-data" name="fileupload">
+
+
+        <label for="upload" class="btn btn-info btn-lg custom-file-upload">
+            <pre>Supported file types: .mp3 / .wav / .ogg</pre>
+            <br><br>
+            <h2>
+                <span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Browse....&nbsp;
+            </h2>
+            <br><br>
+        </label>
+        <input name="myfile" type="file" id="upload" accept="audio/*">
+
+
+        <br><br>
+
+
+        <button class="btn btn-block btn-info btn-lg " type="submit"><h2><span
+                class="glyphicon glyphicon-cloud-upload"></span>&nbsp;Upload&nbsp;</h2><br></button>
+
+    </form>
+</div>
+<!-- upload form -->

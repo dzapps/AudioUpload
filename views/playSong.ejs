@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../views/partials/head %>
+<body style="overflow:hidden;">
+
+<div class="panel-group">
+    <div class="panel panel-primary">
+
+<audio src="/uploads/<%= doc.filename %>" id="sound"></audio>
+<script src="/js/AudioPlayer.js"></script>
+        <div class="panel-heading text-center"><h2> <%= doc.originalname %></h2>
+        </div>
+        <div class="panel-body text-center">
+            <br>
+            <button type="button" onclick="play()" class="btn btn-success " id="playButton">
+                <span class="glyphicon glyphicon-play"></span> PLAY
+            </button>
+
+            <button type="button" onclick="pause()" class="btn btn-danger" id="pauseButton"  style="display: none">
+                <span class="glyphicon glyphicon-pause"></span> PAUSE
+            </button>
+
+            <button type="button" onclick="volDn()" class="btn btn-info" id="pauseButton">
+                VOL <span class="glyphicon glyphicon-minus"></span></button>
+
+            <button type="button" onclick="volUp()" class="btn btn-info" id="pauseButton">
+                VOL <span class="glyphicon glyphicon-plus"></span></button>
+
+            <button type="button" onclick="mute()" class="btn btn-danger" id="pauseButton">
+                MUTE
+            </button>
+            <hr>
+            <h4 id="player-info" class="text-center"></h4>
+        </div>
+
+</body>
+</html>
