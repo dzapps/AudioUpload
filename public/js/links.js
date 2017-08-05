@@ -8,7 +8,7 @@
      	$(songURL_DOM_ID).val(songURL);
      });
         
-        $(songURLBox_DOM_ID).click(function(){$(songURL_DOM_ID).select();
+        $(songURLBox_DOM_ID).click(function(){$(songURL_DOM_ID).setSelectionRange(0, 9999);
     });
         $(songURLBox_DOM_ID).mouseleave(function(){$(songURL_DOM_ID).blur();
     });

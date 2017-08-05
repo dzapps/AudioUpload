@@ -1,49 +1,27 @@
 
-
-
-
-
-
-hr {
-	border-top-color:black !important;
-}
-
-nav a:hover{
-	color:#337ab7 !important;
-
-}
-.jumbotron{
-
-}
-
 /*file upload button*/
-input[type="file"] {
-	display: none;
-}
+  input[type="file"] {
+      display: none;
+  }
+
+  .custom-file-upload {
+      display: inline-block;
+      cursor: pointer;
+      width: 100%;
+  }
 
 
-.custom-file-upload {
-    display: inline-block;
-    cursor: pointer;
-    width: 100%;
-}
+  .btn-default {
+      background-color:#FFBA08 !important; 
+      color:#032B43 !important;
+      border: 0px; 
+  }
 
-
-.btn-default {
-background-color:#FFBA08 !important; 
-color:#032B43 !important;
-border: 0px; 
-}
-.btn-info {
-background-color:#FFBA08 !important; 
-color: #032B43;
-border: 0px; 
-
-}
-
-
-
-/*--------------------*/
+  .btn-info {
+      background-color:#FFBA08 !important; 
+      color: #032B43;
+      border: 0px; 
+  }
 
   body {
       font: 400 15px Lato, sans-serif;
@@ -52,22 +30,32 @@ border: 0px;
       color: #D00000 !important;
   }
 
-
   h2 {
       font-size: 24px;
       text-transform: uppercase;
       font-weight: 600;
       margin-bottom: 0px;
   }
+    
+ hr {
+      border-top-color:black !important;
+ }
+
+  nav a:hover{
+      color:#337ab7 !important;
+  }
+
+
   h2 a{
       color: #FFBA08;
   }
 
   h2 a:hover{
-  	  color: white;
+     color: white;
   }
+
   h4 {
-  	 text-transform: uppercase;
+  	  text-transform: uppercase;
       font-size: 19px;
       line-height: 1.375em;
       color: #303030;
@@ -75,47 +63,23 @@ border: 0px;
       margin-bottom: 0px;
   }  
 
-  h6{
-  	text-transform: uppercase;
+  h6 {
+      text-transform: uppercase;
   }
-
   .jumbotron {
       background-color: #FFBA08;
       color: #032B43;
       padding: 100px 25px;
       font-family: Montserrat, sans-serif;
   }
-    .info {
+  .info {
       color: #FFBA08;
-      padding: 10px 10px;
-      
+      padding: 10px 10px;  
       font-family: Montserrat, sans-serif;
   }
   .container-fluid {
       padding: 40px 20px;
   }
-  .bg-grey {
-      background-color: #f6f6f6;
-  }
-  .logo-small {
-      color: #FFBA08;
-      font-size: 50px;
-  }
-  .logo {
-      color: #FFBA08;
-      font-size: 200px;
-  }
-  .thumbnail {
-      padding: 0 0 15px 0;
-      border: none;
-      border-radius: 0;
-  }
-  .thumbnail img {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 10px;
-  }
-  
   .item h4 {
       font-size: 19px;
       line-height: 1.375em;
@@ -136,17 +100,13 @@ border: 0px;
 
 
 .panel .btn-info{
-  color: #032B43 !important;
+      color: #032B43 !important;
 }
- .panel .btn-default{
-	color: green !important;
-  border: 1px solid black; 
+.panel .btn-default{
+      color: green !important;
+      border: 1px solid black; 
 }
-
-
-
-
-  .panel-heading {
+.panel-heading {
       color: #032B43 !important;
       background-color: #FFBA08 !important;
       padding: 10px;
@@ -171,12 +131,12 @@ border: 0px;
       background-color: #FFBA08;
       color: #136F63;
   }
- .form-control {
-	background-color:#FFBA08 !important;
-	color:#032B43 !important;
-	border:0px !important;
-	box-shadow:inset 0 0 10px !important;
-}
+  .form-control {
+	    background-color:#FFBA08 !important;
+	    color:#032B43 !important;
+	    border:0px !important;
+	    box-shadow:inset 0 0 10px !important;
+  }
   .navbar {
       margin-bottom: 0;
       background-color: #FFBA08;
