@@ -13,6 +13,10 @@
         document.execCommand("selectall");
     });
 
+    $(songURLBox_DOM_ID).dblclick(function(){
+        $(songURL_DOM_ID).focus();
+        document.execCommand("selectall");
+    });
 
     $(songURLBox_DOM_ID).mouseleave(function(){
         $(songURL_DOM_ID).blur();
