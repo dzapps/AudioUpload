@@ -8,14 +8,9 @@
         $(songURL_DOM_ID).val(songURL);
      });
         
-    $(songURLBox_DOM_ID).click(function(){
-        $(songURL_DOM_ID).focus();
-        document.execCommand("selectall");
-    });
 
     $(songURLBox_DOM_ID).dblclick(function(){
-        $(songURL_DOM_ID).focus();
-        document.execCommand("selectall");
+        $(songURL_DOM_ID).select();
     });
 
     $(songURLBox_DOM_ID).mouseleave(function(){
