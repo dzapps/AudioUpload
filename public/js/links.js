@@ -8,7 +8,7 @@
      	$(songURL_DOM_ID).val(songURL);
      });
         
-        $(songURLBox_DOM_ID).click(function(){$(songURL_DOM_ID).focus(focustext());
+        $(songURLBox_DOM_ID).click(function(){$(songURL_DOM_ID).focus();
     });
 
 
@@ -22,11 +22,3 @@ var OpenURL = function(_id) {
     window.open(songURL,"","width=600,height=300");
 }
 
- function focustext() {
-    var input = this;
-    setTimeout(function () {
-        input.selectionStart = 0;
-        input.selectionEnd = input.value.length;
-        },100);
-}
-    

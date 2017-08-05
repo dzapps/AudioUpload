@@ -37,9 +37,9 @@
       margin-bottom: 0px;
   }
     
- hr {
+  hr {
       border-top-color:black !important;
- }
+  }
 
   nav a:hover{
       color:#337ab7 !important;
