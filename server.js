@@ -9,8 +9,7 @@ app.engine('html', require('ejs').renderFile);
 var helpers = require('express-helpers');
 helpers(app);
 
-app.use(express.static(__dirname + '/public/'));
-app.use(express.static(__dirname + '/public/uploads'));
+
 
 var server = app.listen(process.env.PORT, function () {
     console.log("server started")
@@ -81,7 +80,8 @@ app.post('/process_upload', upload.single('myfile'), function (req, res) {
 });
 /********************************************************************/
 
-
+app.use(express.static(__dirname + '/public/'));
+app.use(express.static(__dirname + '/public/uploads'));
 
 app.get('/', function (req, res) {
     res.render('index');
