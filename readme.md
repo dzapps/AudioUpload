@@ -8,23 +8,23 @@ https://audioupload.herokuapp.com/
 
 
 ### Home page
-![Home](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/v2/home.PNG "Home")
+![Home](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/v2/home.png "Home")
 
 
 
 
 ### Uploading files
-![Upload](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/v2/upload.PNG "Upload")
-![Upload](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/v2/confirm.PNG "Upload")
+![Upload](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/v2/upload.png "Upload")
+![Upload](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/v2/confirm.png "Upload")
 
 
  
 ### Featured uploads
- ![Recent](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/v2/top.PNG "Recent Uploads")
+ ![Recent](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/v2/top.png "Recent Uploads")
   
   
 ### Recent uploads
- ![Recent](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/v2/recent.PNG "Recent Uploads")
+ ![Recent](https://github.com/iqbal-singh/AudioUpload/blob/master/screenshots/v2/recent.png "Recent Uploads")
   
  
 ## Live Demo
