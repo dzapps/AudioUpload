@@ -28,4 +28,5 @@ var OpenURL = function(_id) {
         input.selectionStart = 0;
         input.selectionEnd = input.val().length;
         },100);
+}
     
