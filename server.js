@@ -1,11 +1,15 @@
 var express = require('express');
-
 var app = express();
-app.set('views', __dirname + '/views/');
+
+app.set('view engine', 'ejs');
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
 app.engine('html', require('ejs').renderFile);
 
 var helpers = require('express-helpers');
 helpers(app);
+
+
 
 var server = app.listen(process.env.PORT, function () {
     console.log("server started")
@@ -25,7 +29,6 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, database) {
     db = database;
     console.log("connected to db");
 });
-
 
 //file uploads with multer
 /********************************************************************/
@@ -57,7 +60,7 @@ app.post('/process_upload', upload.single('myfile'), function (req, res) {
 
     if (req.file) {
         req.file.score = 0;
-        console.log(req.file);
+       
 
         //store file info into db only if it is an audio file
         db.collection(FILE_COLLECTION).insertOne(req.file, function (err, doc) {
@@ -65,14 +68,14 @@ app.post('/process_upload', upload.single('myfile'), function (req, res) {
                 handleError(res, err.message, "db Error: adding file");
                 res.end('Error adding file info into db.');
             } else {
-                res.render('confirm.ejs', {s: req.file});
-                console.log(req.file);
+                res.render('upload_pages/confirm', {s: req.file});
+               
             }
         });
     }
     else if (Error) {
-        res.render('error.html');
-        console.log(req.file);
+        res.render('upload_pages/errorPage');
+
     }
 });
 /********************************************************************/
@@ -81,16 +84,17 @@ app.use(express.static(__dirname + '/public/'));
 app.use(express.static(__dirname + '/public/uploads'));
 
 app.get('/', function (req, res) {
-    res.render('index.html');
+    res.render('index');
 });
 
 app.get('/home', function (req, res) {
-    res.render('index.html');
+    res.render('index');
 });
 
 app.get('/upload', function (req, res) {
-    res.render('upload.html');
+    res.render('upload_pages/upload');
 });
+
 
 app.get('/files', function (req, res) {
     //recent uploads
@@ -99,7 +103,7 @@ app.get('/files', function (req, res) {
         if (err) {
             handleError(res, err.message, "Error");
         } else {
-            res.render('files.ejs', {allFiles: docs});
+            res.render('files_pages/recentUploads', {allFiles: docs});
         }
     });
 });
@@ -111,7 +115,7 @@ app.get('/featured', function (req, res) {
         if (err) {
             handleError(res, err.message, "Error");
         } else {
-            res.render('featured.ejs', {allFiles: docs});
+            res.render('files_pages/topUploads', {allFiles: docs});
         }
     });
 });
@@ -124,39 +128,54 @@ app.get('/files/:id', function (req, res) {
         if (err) {
             handleError(res, err.message, "db Error: getting file by id");
         } else {
-            res.render('player.ejs', {doc});
+            res.render('playSong', {doc});
+        }
+    });
+});
+
+app.get("/score/:id", function (req, res) {
+    //score by id
+
+    db.collection(FILE_COLLECTION).findOne({_id: new ObjectID(req.params.id)}, function (err, doc) {
+        if (err) {
+            handleError(res, err.message, "db Error: getting file by id");
+        } else {
+            res.send(''+doc.score);
         }
     });
 });
 
 
-app.get("/like", function (req, res) {
-    var songID = req.query.lsongID;
-    //increment song score rating
+app.post("/like/", function (req, res) {
 
+    var songID = req.body.SongID;
+    //score++
     db.collection(FILE_COLLECTION).update({_id: new ObjectID(songID)}, {$inc: {score: 1}}, function (err, doc) {
         if (err) {
             handleError(res, err.message, "db Error: getting file by id");
         } else {
-            console.log(doc);
+            
             res.sendStatus(200);
         }
     });
 
 });
 
-app.get("/dislike", function (req, res) {
-    var songID = req.query.dsongID;
-    //decrement song score rating
 
+
+app.post("/dislike/", function (req, res) {
+
+    var songID = req.body.SongID;
+    //score--
     db.collection(FILE_COLLECTION).update({_id: new ObjectID(songID)}, {$inc: {score: -1}}, function (err, doc) {
         if (err) {
             handleError(res, err.message, "db Error: getting file by id");
         } else {
-            console.log(doc);
+            
             res.sendStatus(200);
         }
     });
 
 });
+
 

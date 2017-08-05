@@ -1,0 +1,32 @@
+<!-- uploads -->
+<div class="info container-fluid text-left">
+  <% for(var i=0; i < allFiles.length; i++) { %>
+ <div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4><%=allFiles[i].originalname%></h4>
+        <button class="btn btn-sm btn-info" id="<%=allFiles[i]._id %>-likebtn"><span class="glyphicon glyphicon-chevron-up"></span></button>
+        <button class="btn btn-sm btn-info" id="<%=allFiles[i]._id %>-dislikebtn"><span class="glyphicon glyphicon-chevron-down"></span></button>
+        <h6>Score:</h6><div id="<%=allFiles[i]._id %>-score"><%=allFiles[i].score%></div>
+      </div>
+      <div class="panel-body">
+        <button onclick="OpenURL('<%=allFiles[i]._id %>');" class="btn btn-default">
+          <span class="glyphicon glyphicon-play-circle"></span> Play
+        </button>
+        <a class="btn btn-default" href="/uploads/<%= allFiles[i].filename %>" role="button" target="_blank" download>
+          <span class="glyphicon glyphicon-play-circle"></span> Download
+        </a>
+      </div>
+      <div class="panel panel-footer" id="<%=allFiles[i]._id %>-urlbox">
+        <input type="text" class="form-control" id="<%=allFiles[i]._id %>-url" readonly>
+      </div>
+    </div>
+  </div>
+  <script>
+  generateCopyURL("<%=allFiles[i]._id %>");
+  createLikeButton("<%=allFiles[i]._id %>");
+  createDisLikeButton("<%=allFiles[i]._id %>");
+  </script>
+  <% } %>
+</div>
+<!-- uploads -->
