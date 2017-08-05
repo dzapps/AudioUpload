@@ -26,7 +26,7 @@ var OpenURL = function(_id) {
     var input = this;
     setTimeout(function () {
         input.selectionStart = 0;
-        input.selectionEnd = input.val().length;
+        input.selectionEnd = input.value.length;
         },100);
 }
     
