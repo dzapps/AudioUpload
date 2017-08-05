@@ -8,10 +8,9 @@
      	$(songURL_DOM_ID).val(songURL);
      });
         
-        $(songURLBox_DOM_ID).click(function(){$(songURL_DOM_ID).select();
+        $(songURLBox_DOM_ID).click(function(){$(songURL_DOM_ID).focus(focustext());
     });
-        $(songURLBox_DOM_ID).vmousedown(function(){$(songURL_DOM_ID).select();
-    });
+
 
         $(songURLBox_DOM_ID).mouseleave(function(){$(songURL_DOM_ID).blur();
     });
@@ -22,3 +21,11 @@ var OpenURL = function(_id) {
 
     window.open(songURL,"","width=600,height=300");
 }
+
+ function focustext() {
+    var input = this;
+    setTimeout(function () {
+        input.selectionStart = 0;
+        input.selectionEnd = input.val().length;
+        },100);
+    
