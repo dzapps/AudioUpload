@@ -39,7 +39,4 @@ https://audioupload.herokuapp.com/
 * [Bootstrap 3](https://getbootstrap.com/) 
 
 
-## License
-
-This project is licensed under the MIT License 
 
